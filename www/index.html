@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        h2,
+        h3 {
+            margin: 0;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+        }
+        .shopping{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        .shopping li{
+            box-sizing: border-box;
+            width: 20%;
+            height: 500px;
+            padding: 10px;           
+        }
+        .shopping li a {
+            box-sizing: border-box;
+
+            height: 100%;
+            width: 100%;
+            padding: 30px;
+            background-color: #66f;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .shopping li a img{
+            width: 100%;
+            display: block;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>英雄展示</h2>
+    </header>
+    <div class="container">
+        <ul class="shopping">
+            {{each results}}
+           <li>
+               <a href="#">
+                   <img src="{{$value.icon}}" alt="">
+                   <p>{{$value.name}}</p>
+               </a>
+           </li>
+           {{ /each }}
+        </ul>
+    </div>
+</body>
+
+</html>

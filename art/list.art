@@ -1,0 +1,3 @@
+{{each files}}
+    <h2><a href="{{$value[0]}}">{{$value[1]}}</a></h2>
+{{/each}}
